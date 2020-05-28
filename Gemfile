@@ -1,5 +1,7 @@
 source ENV['GEM_SOURCE'] || 'https://rubygems.org'
 
+gem 'puppet_litmus', require: false, git: 'https://github.com/pmcmaw/puppet_litmus', branch: 'IAC-825'
+
 def location_for(place_or_version, fake_version = nil)
   git_url_regex = %r{\A(?<url>(https?|git)[:@][^#]*)(#(?<branch>.*))?}
   file_url_regex = %r{\Afile:\/\/(?<path>.*)}
